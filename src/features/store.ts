@@ -1,7 +1,8 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { dronesReducer } from "./drones/dronesSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: { drones: dronesReducer },
 });
 
 export type AppDispatch = typeof store.dispatch;
